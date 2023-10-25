@@ -20,26 +20,42 @@
     */
 
     let qtd = Number(prompt("informe quantos usuarios votaram:"))
-
+    let joao = 0
+    let maria = 0
+    let nulo = 0
+    let branco = 0
 
     //Entrada
 
     contador = 0
     while(contador < qtd){
         let votos = Number(prompt(`em quem o votante votou? (1-Joazinho, 2-Mariazinha, 3-Nulo, 4-Branco)`))
-        let joao = 0
-        let maria = 0
-        let nulo = 0
-        let branco = 0
-        if(votos == "1"){
-            votos = votos
+        
+        if(votos == 1){
+            joao++
         }
-
-
+        if(votos == 2){
+            maria++
+        }
+        if(votos == 3){
+             nulo++
+        }
+        if(votos == 4){
+            branco++
+        }
+        contador++
     }
+    if (maria > joao){
+        document.write(`maria vencedora com maior quantidade de votos <br>`)
+    }
+    else if(maria == joao){
+        document.write(`empate entre os dois canditados <br>`)
+    }
+    else(document.write(`maria vencedora com maior quantidade de votos <br>`))
+
+    document.write(` <br> votos joaozinho: ${joao} votos <br> votos maria: ${maria} votos <br> votos nulos em porcentagem: ${(nulo * 100) / qtd}% <br> votos brancos em porcentagem: ${(branco * 100) / qtd}%`)
 
     //Processamento
-
 
     //Saída
 
