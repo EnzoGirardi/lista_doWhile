@@ -7,8 +7,17 @@
 
     //Entrada
 
+    let usuario = prompt("informe o nome de usuário")
+    let senha = prompt("informe a senha")
 
     //Processamento
+
+    while(usuario == senha){
+        alert(`nome de usuario igual a senha`)
+        usuario = prompt("tente novamente. informe o nome de usuário")
+        senha = prompt("informe a senha")
+    }
+    document.write(`usuário : ${usuario} <br> senha : ${senha}`)
 
 
     //Saída

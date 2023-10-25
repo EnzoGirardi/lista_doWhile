@@ -7,8 +7,14 @@
 
     //Entrada
 
+    let nota = Number(prompt("informe a nota do aluno entre 0 e 10:"))
 
     //Processamento
+
+    while (nota < 0 || nota > 10 || isNaN(nota)) {
+    nota = Number(prompt("Inválido, coloque outro número"));
+}
+alert(`a nota é ${nota}`)
 
 
     //Saída

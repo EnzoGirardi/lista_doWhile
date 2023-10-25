@@ -7,9 +7,17 @@
 
     //Entrada
 
+    let senha = prompt("informe uma senha")
+
 
     //Processamento
 
+    while(senha.length != 4 || isNaN(senha)){
+        alert(`erro tente novamente`)
+        senha = prompt("informe uma senha")
+    }
+
+    alert(`senha correta !!!`)
 
     //Saída
 

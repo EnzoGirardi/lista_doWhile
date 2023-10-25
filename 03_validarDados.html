@@ -12,8 +12,39 @@
 
     //Entrada
 
+    let nome = prompt("informe seu nome")
+    let idade = Number(prompt("informe sua idade"))
+    let salario = Number(prompt("inform seu salario"))
+    let sexo = (prompt("informe seu sexo: (m - masc  f - fem)").toLowerCase())
+    let estadocivil = prompt("informe seu estado civil, solteiro, casado, viuvo, divorciado ('s', 'c', 'v', 'd')".toLowerCase())
 
     //Processamento
+
+    while (nome < 3){
+        alert(`nome invalido, informe outro nome`)
+        nome = prompt("informe seu nome")
+    }
+
+    while (idade < 0 || idade > 150 ){
+        alert(`idade invalida, infore outra idade`)
+        idade = prompt("informe sua idade")
+    }
+
+    while (salario < 0){
+        alert(`salario invalido, informe outro salario`)
+        salario = Number(prompt("inform seu salario"))
+    }
+
+    while (sexo != "f" && sexo != "m"){
+        alert(`só existem dois generoskkkkkkkkk tenta denovo ai campeao`)
+        sexo = Number(prompt("informe seu sexo: (m - masc  f - fem)"))
+    }
+    while (estadocivil != "s" && estadocivil != "c" && estadocivil != "v" && estadocivil != "d"){
+        alert(`estado civil invalido, informe outro estado civil`)
+        estadocivil = prompt("informe seu estado civil, solteiro, casado, viuvo, divorciado ('s', 'c', 'v', 'd')")
+    }
+
+    document.write(`${nome} <br> ${idade} <br> ${salario} <br> ${sexo} <br> ${estadocivil}`)
 
 
     //Saída
